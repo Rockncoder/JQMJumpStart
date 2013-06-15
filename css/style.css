@@ -1,0 +1,165 @@
+
+/* valid both vertically and horizontally */
+
+section, .a-panel {
+    background: url('pebbled_background_tile.jpg') repeat;
+}
+
+.scroller {
+    margin: 0;
+    padding: 0;
+}
+
+.scroller ul {
+    display: block;
+    float: left;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+
+.scroller li {
+    display: block;
+    float: left;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background-color: #f5f5f5;
+    font-size: 120px;
+}
+
+/* only for vertical scrolling */
+#verticalWrapper, .verticalWrapper {
+    width: 100%;     /* will be the same as the width of the content area */
+    height: 240px;   /* will be changed by JavaScript to the height of the content area */
+    overflow: hidden;
+    margin: 0;
+}
+
+#verticalScroller, .verticalScroller {
+    width: 100%;
+    /*    height: 3231px;   max number scroll elements + 1 times their height */
+    background-color: #f00;
+    height: 100%;
+}
+
+#verticalScroller li, .verticalScroller li {
+    width: 100%;
+    /* height: 120px;   this is the height of an individual element */
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #fff;
+}
+
+/* only for horizontal scrolling */
+#horizontalWrapper, .horizontalWrapper {
+    width: 100%;
+    height: 130px;   /* will be changed by JavaScript to the height of the content area */
+    overflow: hidden;
+}
+
+#horizontalScroller, .horizontalScroller {
+    width: 3172px;  /* max number scroll elements + 1 times their width */
+    height: 100%;   /* it will be the same as the wrapper's height even after it is changed */
+    background-color: #0f0;
+}
+
+#horizontalScroller li, .horizontalScroller li {
+    width: 120px;       /* this is the width of an individual element */
+    height: 100%;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #fff;
+}
+
+#pullDown {
+    background:#fff;
+    height:40px;
+    line-height:40px;
+    padding:5px 10px;
+    border-bottom:1px solid #ccc;
+    font-weight:bold;
+    font-size:14px;
+    color:#888;
+}
+#pullDown .pullDownIcon {
+    display:block; float:left;
+    width:40px; height:40px;
+    background:url(pull-icon@2x.png) 0 0 no-repeat;
+    -webkit-background-size:40px 80px; background-size:40px 80px;
+    -webkit-transition-property:-webkit-transform;
+    -webkit-transition-duration:250ms;
+}
+
+#pullDown.flip .pullDownIcon {
+    -webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullUp.flip .pullUpIcon {
+    -webkit-transform:rotate(0deg) translateZ(0);
+}
+
+#pullDown.loading .pullDownIcon, #pullUp.loading .pullUpIcon {
+    background-position:0 100%;
+    -webkit-transform:rotate(0deg) translateZ(0);
+    -webkit-transition-duration:0ms;
+
+    -webkit-animation-name:loading;
+    -webkit-animation-duration:2s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:linear;
+}
+
+@-webkit-keyframes loading {
+    from { -webkit-transform:rotate(0deg) translateZ(0); }
+    to { -webkit-transform:rotate(360deg) translateZ(0); }
+}
+
+
+#map {
+    padding: 0;
+    margin: 0;
+    width: 100%; /* this isn't really necessary, but let's be clear */
+    height: 240px; /* this will be set dynamically later */
+}
+
+
+#splashContent{
+    background-color: #ffc0cb;
+    height: 240px;
+}
+
+#miniMap, #detailsContent {
+    border: 2px solid black;
+}
+
+.details
+{
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 0 8px;
+}
+
+.details h2
+{
+    padding: 0;
+    margin: 0;
+}
+
+.details li
+{
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-shadow: 1px 1px #fff;
+}
+
+.details-wrapper a
+{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#mySettings, #myCredits {
+    text-shadow: 1px 1px #fff;
+}
