@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+  <link href="../../../css/jquery.mobile-1.3.1.min.css" rel="stylesheet" type="text/css"/>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="../../../libs/jquery-1.9.1.min.js" type="text/javascript"></script>
+  <script src="../../../libs/jquery.mobile-1.3.1.min.js" type="text/javascript"></script>
+</head>
+<body>
+	<section id="page1" data-role="page" data-rnc-jspage="page1">
+		<header data-role="header" data-position="fixed">
+			<h1></h1>
+		</header>
+		<article data-role="content">
+			<!-- The manipulation of the content-secondary and content-primary classes is the key thing to understand -->
+			<div class="content-secondary">
+				<fieldset id="squirrels" data-role="controlgroup">
+					<legend>Pick Your Favorite Squirrel:</legend>
+					<input type="radio" name="radio-choice-1" id="radio-choice-1" value="./images/SquirrelFox.jpg" checked="checked" />
+					<label for="radio-choice-1">Fox Squirrel</label>
+
+					<input type="radio" name="radio-choice-1" id="radio-choice-2" value="./images/SquirrelGrey.jpg"  />
+					<label for="radio-choice-2">Grey Squirrel</label>
+
+					<input type="radio" name="radio-choice-1" id="radio-choice-3" value="./images/SquirrelRed.jpg"  />
+					<label for="radio-choice-3">Red Squirrel</label>
+				</fieldset>
+				<div class="show-page-button">
+					<a href="#page2" data-role="button" data-transition="slide">See Your Squirrel!</a>
+				</div>
+			</div>
+			<div id="page1Chart" class="content-primary">
+				<div>
+					<!-- The trick is that there are two images, one on each page  -->
+					<img src="./images/SquirrelFox.jpg" class="squirrel-image center" />
+				</div>
+			</div>
+		</article>
+		<footer data-role="footer" data-position="fixed">
+			<h2>@therockncoder</h2>
+		</footer>
+	</section>
+	<section id="page2" data-role="page" data-rnc-jspage="page2">
+		<header data-role="header" data-position="fixed">
+			<h1></h1>
+		</header>
+		<article data-role="content">
+			<!-- Note: there are no content-xxxs here  -->
+			<a href="#page1" data-role="button" data-transition="slide" data-direction="reverse">Choose Another Squirrel</a>
+			<div>
+				<!-- Here is the second image, note: the class is the same as the first image -->
+				<img src="./images/SquirrelFox.jpg" class="squirrel-image center"  />
+			</div>
+		</article>
+		<footer data-role="footer" data-position="fixed">
+			<h2>@therockncoder</h2>
+		</footer>
+	</section>
+
+  <script src="../../../libs/app.js" type="text/javascript"></script>
+  <script src="pages.js" type="text/javascript"></script>
+</body>
+</html>

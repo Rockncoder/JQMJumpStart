@@ -163,3 +163,8 @@ section, .a-panel {
 #mySettings, #myCredits {
     text-shadow: 1px 1px #fff;
 }
+
+.myChart {
+    width: 100%;
+    height: 400px;
+}

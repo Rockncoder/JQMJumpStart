@@ -16,10 +16,17 @@ var RocknCoder = RocknCoder || {};
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
       },
+      drawMarker = function (map, biz) {
+          new google.maps.Marker({
+            position: new google.maps.LatLng(biz.latitude, biz.longitude),
+            map: map
+          });
+      },
       showMap = function (loc) {
         var options = getOptions(14);
         options.center = new google.maps.LatLng(loc.latitude, loc.longitude);
         map = new google.maps.Map(mapElement, options);
+        drawMarker(map, {latitude:  33.8226203918457, longitude: -118.331848144531});
       };
     return {
       pageshow: function () {
