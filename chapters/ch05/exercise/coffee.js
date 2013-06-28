@@ -1,6 +1,4 @@
-coffee.js
-index.html
-pages.js/**
+/**
  * User: Troy
  * Date: 4/30/13
  * Time: 9:15 PM
